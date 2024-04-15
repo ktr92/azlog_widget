@@ -7,8 +7,8 @@
       const $to = document.querySelector("[data-input='to']")
       const $wrapperFrom = document.querySelector("[data-wrapper='from']")
       const $wrapperTo = document.querySelector("[data-wrapper='to']")
-      let input1 = $input1.value
-      let input2 = $input2.value
+      let input1 = $inputFrom.value
+      let input2 = $inputTo.value
       $inputTo.value = input1
       $inputFrom.value = input2
 
@@ -17,17 +17,25 @@
       $from.value = input2
       $to.value = input1
 
-      if($wrapperFrom.classList.contains('conplete')) {
-        $wrapperTo.classList.add('complete')
+      if($wrapperFrom.classList.contains('complete')) {
+        if (!$wrapperTo.classList.contains('complete')) {
+          $wrapperTo.classList.add('complete')
+          $wrapperFrom.classList.remove('complete')
+        }
       } else {
-        $wrapperTo.classList.remove('complete')
+        if ($wrapperTo.classList.contains('complete')) {
+          $wrapperFrom.classList.add('complete')
+          $wrapperTo.classList.remove('complete')
+        }
       }
 
-      if($wrapperTo.classList.contains('conplete')) {
-        $wrapperFrom.classList.add('complete')
-      } else {
-        $wrapperFrom.classList.remove('complete')
-      }
+     /*  if($wrapperTo.classList.contains('complete')) {
+        if(!$wrapperFrom.classList.contains('complete')) {
+          $wrapperFrom.classList.add('complete')
+          $wrapperTo.classList.remove('complete')
+
+        }
+      }  */
   })
 })();
 
