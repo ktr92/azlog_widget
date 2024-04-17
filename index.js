@@ -1,3 +1,32 @@
+(function calcFront() {
+  //демонстрация - убрать
+  const $button = document.querySelector("[data-calc='calc']")
+  const $result = document.querySelector("[data-calc='result']")
+  $button.addEventListener('click', function(e) {
+    e.preventDefault()
+    $button.classList.add('active')
+    $result.classList.add('active')
+    $result.scrollIntoView()
+  })
+})();
+
+(function accordion() {
+  const $toggler = document.querySelectorAll('[data-toggler]')
+  $toggler.forEach($item => {
+    $item.addEventListener('click', e => {
+      const accId = $item.getAttribute('data-toggler')
+      const $accContent =  document.querySelector(`[data-toggle=${accId}]`) 
+      if ($accContent.classList.contains('active')) {
+        $accContent.classList.remove('active')
+        $item.classList.remove('active')
+      } else {
+        $accContent.classList.add('active')
+        $item.classList.add('active')
+      }
+    })
+  })
+})();
+
 (function switcher() {
   document.querySelector(".switcher a").addEventListener("click", function (e) {
       e.preventDefault()
