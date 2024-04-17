@@ -1008,6 +1008,9 @@ padding-left: 0;
 padding-right: 0;
 margin-bottom: 25px;
   }
+  .calcform__content .calcform__items, .calcform__footer {
+    margin: 0 -14px;
+  }
   .calcform__content .calcform__items.calcform__items_two_xs .calcform__item {
     width: 50%;
     margin-bottom: 0;
