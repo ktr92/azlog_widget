@@ -924,6 +924,10 @@ background-position: top -2px;
   display: block;
 }
 
+.calcresults__title {
+  display: none !important
+}
+
 @media (max-width: 992px) {
   body {
     margin: 0;
@@ -1065,6 +1069,15 @@ margin-bottom: 25px;
   [data-toggle].active {
     height: unset;
   }
+.calcresults__title.active {
+  display: block !important;
+}
 
+.calcresults__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
 
 }

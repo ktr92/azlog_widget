@@ -2,10 +2,12 @@
   //демонстрация - убрать
   const $button = document.querySelector("[data-calc='calc']")
   const $result = document.querySelector("[data-calc='result']")
+  const $title = document.querySelector(".calcresults__title")
   $button.addEventListener('click', function(e) {
     e.preventDefault()
     $button.classList.add('active')
     $result.classList.add('active')
+    $title.classList.add('active')
     $result.scrollIntoView()
   })
 })();
