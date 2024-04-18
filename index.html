@@ -59,7 +59,8 @@
                         <span class="help-tooltip">
                         <span class="help-tooltip__content">
                         <span class="help-tooltip__text">
-                        Текст подсказки
+                          Не учитывается цена выезда за пределы города, стоимость доп. работ.
+
                         </span>
                         </span>
                         </span>
@@ -94,7 +95,8 @@
                         <span class="help-tooltip">
                         <span class="help-tooltip__content">
                         <span class="help-tooltip__text">
-                        Текст подсказки
+                          Не учитывается цена выезда за пределы города, стоимость доп. работ.
+
                         </span>
                         </span>
                         </span>
@@ -108,14 +110,14 @@
                   <div class="calcform__item">
                     <div class="calcform__title">Вес груза, кг</div>
                     <div class="form-control__wrapper" >
-                      <input class="form-control range-slider__control" data-max="5000" data-min="1" data-weight-format="" name="weight" placeholder="Вес груза, кг" type="text" inputmode="decimal" value="1">
+                      <input class="form-control range-slider__control"  min="-99999" max="99999"  maxlength="5" data-max="5000" data-min="1" data-weight-format="" name="weight" placeholder="Вес груза, кг" type="number" inputmode="decimal" value="1">
                     </div>
                   </div>
                   <div class="calcform__item">
                     <div class="calcform__title">Объем груза, м<sup>3</sup>
                     </div>
                     <div class="form-control__wrapper" >
-                      <input class="form-control range-slider__control" data-max="20" data-min="0.01" data-volume-format="" name="volume" placeholder="Объём груза, м³" type="text" inputmode="decimal" value="0.01">
+                      <input class="form-control range-slider__control" min="-99999" max="99999"   maxlength="5" data-max="20" data-min="0.01" data-volume-format="" name="volume" placeholder="Объём груза, м³" type="number" inputmode="decimal" value="0.01">
                     </div>
                   </div>
                 </div>

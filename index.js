@@ -11,6 +11,29 @@
     $result.scrollIntoView()
   })
 })();
+(function inputLimit() {
+  const onChange = (e) => {
+
+    let value = e.target.value
+    if (e.target.getAttribute('maxlength')) {
+      let length = Number(e.target.getAttribute('maxlength'))
+      if (value.length > length) {
+        e.target.value = value.slice(0, length)
+      }
+    }
+   
+  }
+  //демонстрация - убрать
+  document.querySelectorAll('input[type="number"]').forEach(item => {
+    item.addEventListener('change', (e) => {
+      onChange(e)
+    })
+    item.addEventListener('input', (e) => {
+      onChange(e)
+    })
+  })
+  
+})();
 
 (function accordion() {
   const $toggler = document.querySelectorAll('[data-toggler]')
