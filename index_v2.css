@@ -141,9 +141,7 @@ max-width: 175px;
 .calcform__item_search {
 width: 86px;
 }
-.calcform__items_two_xs .calcform__item {
-  margin-bottom: 9px;
-}
+
 .calcform__item_ttn {
 width: inherit;
 }
@@ -274,17 +272,17 @@ padding-left: 38px;
 }
 .calcform__item input:focus + .placeholder {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 100%;
   color: #373737;
-  top: calc(50% - 8px);
+  top: calc(50% - 10px);
 }
 .calcform__item input.complete:focus {
   background: #fff;
 }
 .calcform__item input.complete + .placeholder {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 100%;
   color: #373737;
   top: calc(50% - 8px);
@@ -313,17 +311,19 @@ padding-left: 38px;
 }
 .error .placeholder {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 100%;
   color: #373737;
-  top: calc(50% - 8px);
+  top: calc(50% - 10px);
 }
 
 .inputLocation {
 position: relative;
 }
 
-
+.calcform__items_two_xs .calcform__item {
+  margin-bottom: 0;
+}
 
 
 .inputLocation svg {
@@ -410,7 +410,7 @@ display: none;
 
 .switcher {
 position: absolute;
-left: 0;
+transform: rotate(90deg);
 right: 0;
 margin: auto;
 width: 36px;
@@ -444,10 +444,10 @@ background: #F23F34;
 border-radius: 5px;
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 14px;
 text-align: center;
 color: #FFFFFF;
-border-radius: 5px;
+border-radius: 8px;
 /* box-shadow: 0 10px 20px -12px #F23F34; */
 transition: all 0.3s ease;
 display: inline-block;
@@ -485,8 +485,8 @@ color: #FFFFFF;
 
 .switches label span:last-child {
   position: relative;
-  width: 48px;
-  height: 28px;
+  width: 38px;
+  height: 23px;
   background: #e9e9e9;
   border-radius: 555px;
   transition: all 0.3s;
@@ -500,10 +500,10 @@ color: #FFFFFF;
 }
 
 .switches label span:last-child::before {
-  left: 4px;
-  top: 4px;
-  width: 20px;
-  height: 20px;
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
   background: #fff;
   border-radius: 50%;
   z-index: 1;
@@ -518,13 +518,15 @@ color: #FFFFFF;
   transform: translateY(-50%);
   background-size: 12px 12px;
 }
-
+.calcform__item {
+  position: relative;
+}
 .switches [type="checkbox"]:checked + label span:last-child {
   background: #f23f34;
 }
 
 .switches [type="checkbox"]:checked + label span:last-child::before {
-  transform: translateX(20px);
+  transform: translateX(16px);
 }
 
 .switches [type="checkbox"]:checked + label span:last-child::after {
@@ -602,6 +604,29 @@ span.calcheader__help {
 
 .calcinfo__icon {
   margin-right: 7px;
+}
+
+.calcform__items_default input {
+  padding-left: 22px;
+}
+.placeholder  {
+  font-size: 14px;
+}
+
+.form-control__wrapper {
+  position: relative;
+}
+
+.calcform__items_default .placeholder {
+  left: 22px;
+}
+
+.calcform__items_default .placeholder {
+  left: 22px;
+}
+
+.calcform__items_default input:focus + .placeholder {
+left: 22px;
 }
 
 .calcinfo__name,
@@ -683,15 +708,22 @@ span.calcheader__help {
 }
 
 .switches__name .checkboxtext {
-  margin-left: 12px;
-  margin-right: 6px;
+font-size: 14px;
+font-weight: normal;
   display: block;
 }
 
 ol.switches {
-  margin-top: 22px;
   padding-left: 0;
-  margin-bottom: 0;
+  margin: 17px 0;
+  width: 100%;
+}
+
+.switches li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
 }
 
 .formcheckbox__items {
@@ -824,18 +856,18 @@ span.formcheckbox__text:before {
 .calcresults {
 }
 .calcresults__items {
-  display: flex;
-  margin: 0 -7px;
+/*   display: flex; */
+
 }
 .calcresults__item {
-  width: calc(100% / 3);
-  padding: 0 7px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 .resultblock {
 }
 .resultblock__wrapper {
   border-radius: 12px;
-  padding: 22px;
+  padding: 12px;
   background: #F5F5F5;
 }
 .resultblock__header {
@@ -844,9 +876,9 @@ span.formcheckbox__text:before {
   align-items: center;
 }
 .resultblock__icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   background: #fff;
   display: flex;
   align-items: center;
@@ -855,15 +887,16 @@ span.formcheckbox__text:before {
 .resultblock__img {
 }
 .resultblock__title {
-  margin-left: 14px;
+  margin-left: 9px;
 }
 .resultblock__name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 1px;
 }
 .resultblock__info {
   color: rgba(55,55,55,0.5);
+  font-size: 12px;
 }
 .resultblock__main {
   font-size: 14px;
@@ -875,25 +908,28 @@ span.formcheckbox__text:before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .resultblock__dt {
-  color: rgba(55,55,55,0.45);
+  color: rgba(55,55,55, 0.55);
+  font-size: 12px;
 }
 .resultblock__dd {
   font-weight: bold;
+  font-size: 12px;
 }
 .resultblock__subtitle {
-  padding-left: 22px;
+  padding-left: 18px;
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 .resultblock__subtitle:before {
   position: absolute;
   content: "";
-  width: 16px;
-  height: 3px;
+  width: 11px;
+  height: 2px;
   background: #F23F34;
   left: 0;
   top: 7px;
@@ -930,11 +966,11 @@ background-position: top -2px;
 }
 
 .resultblock__footertitle {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .resultblock__total {
-  font-size: 22px;
+  font-size: 18px;
   color: #F23F34;
 }
 
@@ -978,9 +1014,7 @@ background-position: top -2px;
   height: calc(100% - 123px);
 }
 
-.calcresults__button {
-  margin-top: 28px;
-}
+
 
 [data-calc="result"] {
   display: none;
@@ -1003,4 +1037,51 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
+}
+
+
+.calcresults__items {
+  flex-wrap: wrap;
+}
+.calcresults__items .calcresults__item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.resultblock__header {
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml,<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M7 5.32211L12.2024 -7.8575e-08L14 1.83894L7 9L-8.03828e-08 1.83894L1.79759 -5.33384e-07L7 5.32211Z" fill="%23373737"/></svg>');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.resultblock__header.active {
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml,<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.67789L12.2024 9L14 7.16106L7 3.0598e-07L-8.03828e-08 7.16106L1.79759 9L7 3.67789Z" fill="%23373737"/></svg>');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.resultblock__main 
+{margin-bottom: 0;}
+
+[data-toggle] {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease-in-out;
+}
+[data-toggle].active {
+  height: unset;
+}
+.calcresults__title.active {
+display: block !important;
+}
+
+.calcresults__title {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+padding-top: 30px;
+}
+
+.resultblock__header {
+  cursor: pointer;
 }
