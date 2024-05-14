@@ -34,6 +34,29 @@
   })
   
 })();
+(function inputData() {
+  const checkData = (e) => {
+    let value = e.target.value
+    if (value.length) {
+     e.target.classList.add('complete')
+     e.target.parentNode.classList.add('complete')
+    } else {
+      e.target.classList.remove('complete')
+      e.target.parentNode.classList.remove('complete')
+    }
+   
+  }
+
+  document.querySelectorAll('[data-input="custom"]').forEach(item => {
+    item.addEventListener('change', (e) => {
+      checkData(e)
+    })
+    item.addEventListener('input', (e) => {
+      checkData(e)
+    })
+  })
+  
+})();
 
 (function accordion() {
   const $toggler = document.querySelectorAll('[data-toggler]')
