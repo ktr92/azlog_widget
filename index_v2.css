@@ -289,10 +289,10 @@ padding-left: 38px;
 }
 
 .errortext {
-  display: none;
+ /*  display: none; */
   font-size: 10px;color: #F23F34;
-  position: absolute;
-  bottom: -15px;
+/*   position: absolute;
+  bottom: -15px; */
   font-weight: 500;
 }
 .error  {
