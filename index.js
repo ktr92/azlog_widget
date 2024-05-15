@@ -75,6 +75,32 @@
   })
 })();
 
+function switchClass(firstEl, secondEl, className) {
+  if(firstEl.classList.contains(className)) {
+    if (!secondEl.classList.contains(className)) {
+      secondEl.classList.add(className)
+      firstEl.classList.remove(className)
+    }
+  } else {
+    if (secondEl.classList.contains(className)) {
+      firstEl.classList.add(className)
+      secondEl.classList.remove(className)
+    }
+  }
+}
+function switchContent(firstEl, secondEl, selector) {
+  const firstContent = firstEl.querySelector(selector)
+  const secondContent = secondEl.querySelector(selector)
+  const firstText = firstContent.innerHTML
+  const secondText = secondContent.innerHTML
+  console.log(secondText)
+  if (firstText && firstText.length) {
+    secondContent.innerHTML = firstText
+  }
+  if (secondText && secondText.length) {
+    firstContent.innerHTML = secondText
+  }
+}
 (function switcher() {
   document.querySelector(".switcher a").addEventListener("click", function (e) {
       e.preventDefault()
@@ -94,25 +120,11 @@
       $from.value = input2
       $to.value = input1
 
-      if($wrapperFrom.classList.contains('complete')) {
-        if (!$wrapperTo.classList.contains('complete')) {
-          $wrapperTo.classList.add('complete')
-          $wrapperFrom.classList.remove('complete')
-        }
-      } else {
-        if ($wrapperTo.classList.contains('complete')) {
-          $wrapperFrom.classList.add('complete')
-          $wrapperTo.classList.remove('complete')
-        }
-      }
+      switchClass($wrapperFrom, $wrapperTo, 'complete')
+      switchClass($wrapperFrom, $wrapperTo, 'error')
+      switchClass($inputFrom, $inputTo, 'complete')
+      switchContent($wrapperFrom,  $wrapperTo, '.errortext')
 
-     /*  if($wrapperTo.classList.contains('complete')) {
-        if(!$wrapperFrom.classList.contains('complete')) {
-          $wrapperFrom.classList.add('complete')
-          $wrapperTo.classList.remove('complete')
-
-        }
-      }  */
   })
 })();
 
