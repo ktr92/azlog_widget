@@ -289,6 +289,8 @@ padding-left: 38px;
 }
 
 .errortext {
+  margin-top: 10px;
+  text-align: center;
  /*  display: none; */
   font-size: 10px;color: #F23F34;
 /*   position: absolute;
@@ -309,13 +311,13 @@ padding-left: 38px;
   border-bottom: 2px solid #f23f34;
   background: #fff;
 }
-.error .placeholder {
+/* .error .placeholder {
   font-weight: 400;
   font-size: 8px;
   line-height: 100%;
   color: #373737;
   top: calc(50% - 10px);
-}
+} */
 
 .inputLocation {
 position: relative;
